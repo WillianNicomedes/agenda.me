@@ -446,7 +446,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
                 <div class="inputBox">
                     <label for="nome_aluno" class="labelInput">Nome aluno:</label>
                     <br>
-                    <input type="text" name="nome_aluno" id="nome_aluno" class="inputUser" placeholder="Digite nome do aluno" required>
+                    <input type="text" name="nome_aluno" id="nome_aluno" class="inputUser" placeholder="Digite nome do aluno" maxlength="50" required>
                 </div>
                 <br>
 
