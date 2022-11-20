@@ -290,7 +290,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="nm_fantasia" class="labelInput">Nome fantasia:</label>
                   <br>
-                  <input type="text" name="nm_fantasia" id="nm_fantasia" class="labelInput" placeholder="Digite nome fatansia" required>
+                  <input type="text" name="nm_fantasia" id="nm_fantasia" class="labelInput" placeholder="Digite nome fatansia" maxlength="50" required>
                 </div>
 
                 <br>
