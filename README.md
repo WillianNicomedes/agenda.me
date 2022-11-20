@@ -9,13 +9,13 @@ Calendário WEB onde pode-se criar consultas e conta com uma edição customizad
 
 ## Funções implementadas
 - Login para acesso ao sistema;
-- Adição de eventos;
-- Edição de eventos;
-- Remoção de eventos;
-- Listagem de eventos;
-- Descrição  de eventos;
-- Hora de início do evento;
-- Hora de Termino do evento;
+- Adição da consulta;
+- Edição da consulta;
+- Remoção da consulta;
+- Listagem da consulta;
+- Descrição  da consulta;
+- Hora de início da consulta;
+- Hora de Termino da consulta;
 - Consulta outros usuários para atendimento, ou seja, a consulta aparecerá no calendário do usuário solicitado e o usuário (Estagiário) poderá responder se poderá aceitar ou não;
 - Cadastro de paciente;
 - Edição de paciente;
