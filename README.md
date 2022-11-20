@@ -41,7 +41,7 @@ Vá na pasta do seu servidor (Usei o XAMPP 8.1.10) no meu caso a pasta 'htdocs' 
 git clone https://github.com/WillianNicomedes/agenda.me.git
 ```
 
-Agora vá até seu banco de dados no meu caso localhost/phpmyadmin, crie um banco com o nome dbagendame e importe o arquivo dbagendame.sql que se encontra na pasta 'mysql', que contém o Banco de dados e itens pré cadastrados como os Usuários e Tabelas, recomendo abrir o arquivo e verificar os dados. Como as senhas estão em Sha1 deixarei a baixo sem a criptografia:
+Agora vá até seu banco de dados no meu caso localhost/phpmyadmin, crie dois bancos com o nome dbagendame e agendame, importe o arquivo dbagendame.sql e agendame.sql que se encontra na pasta 'mysql', que contém o Banco de dados e itens pré cadastrados como os Usuários e Tabelas, recomendo abrir o arquivo e verificar os dados. Como as senhas estão em Sha1 deixarei a baixo sem a criptografia:
 
 ```
 Usuário: estagiario
