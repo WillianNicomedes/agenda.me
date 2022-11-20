@@ -202,7 +202,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                     <label for="nome" class="labelInput">Nome completo:</label>
                     <br>
-                    <input type="text" name="nome" id="nome" class="labelInput" placeholder="Digite seu nome" required>
+                    <input type="text" name="nome" id="nome" class="labelInput" placeholder="Digite seu nome" maxlength="50" required>
                 </div>
 
                 <br>
@@ -210,7 +210,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="senha" class="labelInput">Senha:</label>
                   <br>
-                  <input type="password" name="senha" id="senha" class="labelInput" placeholder="Digite sua senha" required>
+                  <input type="password" name="senha" id="senha" class="labelInput" placeholder="Digite sua senha" maxlength="30" required>
                 </div>
 
                 <br>
@@ -218,7 +218,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="email" class="labelInput">E-mail:</label>
                   <br>
-                  <input type="email" name="email" id="email" class="labelInput" placeholder="Digite seu e-mail" required>
+                  <input type="email" name="email" id="email" class="labelInput" placeholder="Digite seu e-mail" maxlength="50" required>
                 </div>
 
                 <br>
@@ -226,7 +226,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="telefone" class="labelInput">Telefone:</label>
                   <br>
-                  <input type="number" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" required>
+                  <input type="number" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" maxlength="15" required>
                 </div>
                 
                 <br>
@@ -298,7 +298,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                     <label for="cnpj" class="labelInput">CNPJ:</label>
                     <br>
-                    <input type="number" name="cnpj" id="cnpj" class="labelInput" placeholder="Digite seu cnpj" required>
+                    <input type="number" name="cnpj" id="cnpj" class="labelInput" placeholder="Digite seu cnpj" maxlength="100"required>
                 </div>
 
                 <br>
@@ -314,7 +314,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="endereco" class="labelInput">Endereço:</label>
                   <br>
-                  <input type="text" name="endereco" id="endereco" class="labelInput" placeholder="Digite seu endereço" required>
+                  <input type="text" name="endereco" id="endereco" class="labelInput" placeholder="Digite seu endereço" maxlength="100" required>
                 </div>
 
                 <br>
@@ -322,7 +322,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="telefone" class="labelInput">Telefone:</label>
                   <br>
-                  <input type="number" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" required>
+                  <input type="number" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" maxlength="15" required>
                 </div>
 
                 <br>
@@ -330,7 +330,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="email_universiade" class="labelInput">E-mail:</label>
                   <br>
-                  <input type="email" name="email_universiade" id="email_universiade" class="labelInput" placeholder="Digite seu e-mail" required>
+                  <input type="email" name="email_universiade" id="email_universiade" class="labelInput" placeholder="Digite seu e-mail" maxlength="100" required>
                 </div>
 
                 <br>
@@ -338,7 +338,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="senha" class="labelInput">Senha:</label>
                   <br>
-                  <input type="password" name="senha" id="senha" class="labelInput" placeholder="Digite sua senha" required>
+                  <input type="password" name="senha" id="senha" class="labelInput" placeholder="Digite sua senha" maxlength="30" required>
                 </div>
                 
                 <br>
