@@ -1,11 +1,11 @@
 # crud-de-cadastro-php-fullcalendar-mysql
-Cadastro de Eventos com suporte a usuários e cadastro de pacientes com CRUD. (PHP, MySQL, JS, Bootstrap, FullCalendar).
+Cadastro de consultas com suporte a usuários e cadastro de pacientes com CRUD. (PHP, MySQL, JS, Bootstrap, FullCalendar).
 
 <p align="center">
 <img src="principal/assets/img/gallery/principal.png" width="350" height="200" hspace="20"/><img src="principal/assets/img/gallery/info.png" width="350" height="200"/><img src="principal/assets/img/gallery/consulta.png" width="350" height="200" hspace="20"/><img src="principal/assets/img/gallery/crud.png" width="350" height="200"/>
 </p>
 
-Calendário WEB onde pode-se criar eventos e conta com uma edição customizada de arrastar e soltar através do FullCalendar ligado com a implementação do CRUD ao banco MySQL.
+Calendário WEB onde pode-se criar consultas e conta com uma edição customizada de arrastar e soltar através do FullCalendar ligado com a implementação do CRUD ao banco MySQL.
 
 ## Funções implementadas
 - Login para acesso ao sistema;
