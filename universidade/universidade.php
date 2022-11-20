@@ -453,7 +453,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
                 <div class="inputBox">
                   <label for="senha" class="labelInput">Senha do aluno:</label>
                   <br>
-                  <input type="password" name="senha" id="senha" class="inputUser" placeholder="Digite senha do aluno" required>
+                  <input type="password" name="senha" id="senha" class="inputUser" placeholder="Digite senha do aluno" maxlength="30" required>
                 </div>
 
                 <br>
@@ -461,7 +461,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
                 <div class="inputBox">
                   <label for="email" class="labelInput">E-mail do aluno:</label>
                   <br>
-                  <input type="email" name="email_aluno" id="email_aluno" class="inputUser" placeholder="Digite e-mail do aluno" required>
+                  <input type="email" name="email_aluno" id="email_aluno" class="inputUser" placeholder="Digite e-mail do aluno" maxlength="100" required>
                 </div>
 
                 <br>
@@ -469,7 +469,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
                 <div class="inputBox">
                   <label for="periodo" class="labelInput">Período:</label>
                   <br>
-                  <input type="text" name="periodo" id="periodo" class="inputUser" placeholder="Digite período do aluno" required>
+                  <input type="text" name="periodo" id="periodo" class="inputUser" placeholder="Digite período do aluno" maxlength="20"required>
                 </div>
                 
                 <br>
