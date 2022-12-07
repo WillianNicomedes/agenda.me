@@ -4,7 +4,7 @@ SESSION_START();
 define('SERVIDOR','localhost');
 define('USUARIO','root');
 define('SENHA','');
-define('BANCO','Agendame');
+define('BANCO','AgendaMe');
 
 function limpaString($dados){
     $dados = trim($dados);
