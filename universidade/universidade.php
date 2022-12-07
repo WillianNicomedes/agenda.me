@@ -1,5 +1,6 @@
 <?php
 require_once('../class/config.php');
+require_once('../class/Estatiticas.php');
 require_once('../autoload.php');
 
 $login = new Login();
@@ -30,6 +31,9 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
   
   }
 ?>
+<script>
+
+</script>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -342,7 +346,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 											<div class="row">
 												<div class="col-lg-8">
 													<h3 class="font-weight-bold text-dark">São Vicente,</h3>
-													<p class="text-dark">Quinta-Feira 20:30 PM</p>
+													<p class="text-dark"><?php Estatiticas::dia_semana()?></p>
 										
 												</div>
 											</div>
@@ -351,11 +355,11 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 													<div class="bg-primary text-white px-4 py-4 card">
 														<div class="row">
 															<div class="col-sm-6 pl-lg-5">
-																<h2>150</h2>
+																<h2><?php Estatiticas::quantidade_pacientes_cadastrados()?></h2>
 																<p class="mb-0">Seus pacientes</p>
 															</div>
 															<div class="col-sm-6 climate-info-border mt-lg-0 mt-2">
-																<h2>235</h2>
+																<h2><?php Estatiticas::quantidade_estagiarios_cadastrados()?></h2>
 																<p class="mb-0">Seus estagiários</p>
 															</div>
 														</div>
@@ -368,7 +372,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 														<div id="circleProgress1" class="p-2"></div>
 														<div>
 															<p class="font-weight-medium text-dark text-small">Sessões (Pacientes)</p>
-															<h3 class="font-weight-bold text-dark  mb-0">26.50%</h3>
+															<h3 class="font-weight-bold text-dark  mb-0"><?php Estatiticas::sessaoPacientes(); ?></h3>
 														</div>
 													</div>
 												</div>
@@ -377,7 +381,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 														<div id="circleProgress2" class="p-2"></div>
 														<div>
 															<p class="font-weight-medium text-dark text-small">Usuários (Estagiários)</p>
-															<h3 class="font-weight-bold text-dark  mb-0">48.40%</h3>
+															<h3 class="font-weight-bold text-dark  mb-0"><?php Estatiticas::sessaoEstagiarios();?></h3>
 														</div>
 													</div>
 												</div>
@@ -484,7 +488,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
                 <div class="inputBox">
                   <label for="ra" class="labelInput">RA do aluno:</label>
                   <br>
-                  <input type="number" name="ra" id="ra" class="inputUser" placeholder="Digite RA do aluno" maxlength="9" required>
+                  <input type="text" name="ra" id="ra" class="inputUser" placeholder="Digite RA do aluno" maxlength="9" required>
                 </div>    
 
                 <br>
@@ -492,7 +496,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
                 <div class="inputBox">
                   <label for="cpf_aluno" class="labelInput">CPF do aluno:</label>
                   <br>
-                  <input type="number" name="cpf_aluno" id="cpf_aluno" class="inputUser" placeholder="Digite CPF do aluno" maxlength="11" required>
+                  <input type="text" name="cpf_aluno" id="cpf_aluno" class="inputUser" placeholder="Digite CPF do aluno" maxlength="11" required>
                 </div>
 
                 <br>
@@ -537,13 +541,39 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 	<!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
-	<script src="vendors/base/vendor.bundle.base.js"></script>
-    <script src="vendors/chart.js/Chart.min.js"></script>
-	<script src="js/template.js"></script>
-    <script src="vendors/progressbar.js/progressbar.min.js"></script>
+	  <script src="vendors/base/vendor.bundle.base.js"></script>
 		<script src="vendors/justgage/raphael-2.1.4.min.js"></script>
 		<script src="vendors/justgage/justgage.js"></script>
+		<script src="vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+	  <script src="js/template.js"></script>
+    
     <script src="js/jquery.cookie.js" type="text/javascript"></script>
     <script src="js/dashboard.js"></script>
   </body>
 </html>
+<script>
+	if ($('#circleProgress1').length) {
+			var bar = new ProgressBar.Circle(circleProgress1, {
+				color: '#0aadfe',
+				strokeWidth: 10,
+				trailWidth: 10,
+				easing: 'easeInOut',
+				duration: 1400,
+				width: 43,
+			});
+			bar.animate(.<?php echo Estatiticas::sessaoPacientes(); ?>); 
+		}
+			if ($('#circleProgress2').length) {
+			var bar = new ProgressBar.Circle(circleProgress2, {
+				color: '#fa424a',
+				strokeWidth: 10,
+				trailWidth: 10,
+				easing: 'easeInOut',
+				duration: 1400,
+				width: 42,
+
+			});
+			bar.animate(.<?php echo Estatiticas::sessaoEstagiarios();?>); 
+		}	
+	</script>
