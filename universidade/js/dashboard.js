@@ -513,28 +513,5 @@
 				options: visitorsTodayOptions
 			});
 		}
-		if ($('#circleProgress1').length) {
-			var bar = new ProgressBar.Circle(circleProgress1, {
-				color: '#0aadfe',
-				strokeWidth: 10,
-				trailWidth: 10,
-				easing: 'easeInOut',
-				duration: 1400,
-				width: 42,
-			});
-			bar.animate(.18); 
-		}
-		if ($('#circleProgress2').length) {
-			var bar = new ProgressBar.Circle(circleProgress2, {
-				color: '#fa424a',
-				strokeWidth: 10,
-				trailWidth: 10,
-				easing: 'easeInOut',
-				duration: 1400,
-				width: 42,
-
-			});
-			bar.animate(.36); 
-		}	
 	});
 })(jQuery);
