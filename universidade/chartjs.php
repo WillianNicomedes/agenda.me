@@ -201,66 +201,60 @@
                 <legend><b>Cadastro de Estagiário</b></legend>
                 <br><br>
                 <div class="inputBox">
-                    <label for="nome" class="labelInput">Nome completo:</label>
+                    <label for="nome_aluno" class="labelInput">Nome aluno:</label>
                     <br>
-                    <input type="text" name="nome" id="nome" class="inputUser" placeholder="Digite seu nome" required>
+                    <input type="text" name="nome_aluno" id="nome_aluno" class="inputUser" placeholder="Digite nome do aluno" maxlength="50" required>
+                </div>
+                <br>
+
+                <div class="inputBox">
+                  <label for="senha" class="labelInput">Senha do aluno:</label>
+                  <br>
+                  <input type="password" name="senha" id="senha" class="inputUser" placeholder="Digite senha do aluno" maxlength="30" required>
                 </div>
 
                 <br>
 
                 <div class="inputBox">
-                  <label for="senha" class="labelInput">Senha:</label>
+                  <label for="email" class="labelInput">E-mail do aluno:</label>
                   <br>
-                  <input type="password" name="senha" id="senha" class="inputUser" placeholder="Digite sua senha" required>
+                  <input type="email" name="email_aluno" id="email_aluno" class="inputUser" placeholder="Digite e-mail do aluno" maxlength="100" required>
                 </div>
 
                 <br>
 
                 <div class="inputBox">
-                  <label for="email" class="labelInput">E-mail:</label>
+                  <label for="periodo" class="labelInput">Período:</label>
                   <br>
-                  <input type="email" name="email" id="email" class="inputUser" placeholder="Digite seu e-mail" required>
-                </div>
-
-                <br>
-
-                <div class="inputBox">
-                  <label for="telefone" class="labelInput">Telefone:</label>
-                  <br>
-                  <input type="number" name="telefone" id="telefone" class="inputUser" placeholder="Digite seu telefone" required>
+                  <input type="text" name="periodo" id="periodo" class="inputUser" placeholder="Digite período do aluno" maxlength="20"required>
                 </div>
                 
                 <br>
-
-                <p>Sexo:</p>
-                    <input type="radio" id="feminino "name="genero" value="feminino" required>
-                    <label for="Feminino">Feminino</label><br>
-                    <input type="radio" id="masculino "name="genero" value="masculino" required>
-                    <label for="masculino">Masculino</label><br>
-                    <input type="radio" id="outro "name="genero" value="outro" required>
-                    <label for="outro">Outro</label>
-                    <br><br>
 
                     <label for="data_nascimento"><b>Data de nascimento:</b> </label>
+					<br>
                     <input type="date" name="data_nascimento" id="data_nascimento" required>
+
+				<br>
+				<br>
                 
                 <div class="inputBox">
-                  <label for="rg" class="labelInput">RG:</label>
+                  <label for="ra" class="labelInput">RA do aluno:</label>
                   <br>
-                  <input type="number" name="rg" id="rg" class="inputUser" placeholder="Digite seu RG" maxlength="9" required>
+                  <input type="text" name="ra" id="ra" class="inputUser" placeholder="Digite RA do aluno" maxlength="9" required>
                 </div>    
 
                 <br>
 
                 <div class="inputBox">
-                  <label for="cpf" class="labelInput">CPF:</label>
+                  <label for="cpf_aluno" class="labelInput">CPF do aluno:</label>
                   <br>
-                  <input type="number" name="cpf" id="cpf" class="inputUser" placeholder="Digite seu CPF" maxlength="11" required>
+                  <input type="text" name="cpf_aluno" id="cpf_aluno" class="inputUser" placeholder="Digite CPF do aluno" maxlength="11" required>
                 </div>
 
                 <br>
 
-                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+				<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
                    <button onclick="document.getElementById('id03').style.display='none'" type="button" class="w3-button w3-red">Cancelar</button>
                    <span class="w3-right w3-hide-small"><input type="submit" name="submit" id="submit"  class="w3-button w3-green"></span></span>
                 </div>
