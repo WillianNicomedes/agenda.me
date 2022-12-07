@@ -96,7 +96,6 @@
 <!--Javascript geral do sistema-->
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery.form.js"></script>
-    <script src="./js/bloqueador.js" defer></script>
     <script src="./js/upload.js"></script>
     <script src="./js/javascript-agendador.js"></script>
 <!-- Option 1: Bootstrap Bundle with Popper -->
