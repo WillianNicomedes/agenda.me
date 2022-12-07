@@ -135,10 +135,10 @@
     <h3>Faremos o acompanhamento</h3>
     <p>Um de nossos especialistas de espaço de trabalho entrará em contato com você<p> com base em suas preferências de comunicação.</p>
     <form action="./enviar-email.php" method="POST">
-      <input class="field" type="text" name="nome" placeholder="Digite seu nome" maxlength="50">
-      <input class="field" type="email" name="email" placeholder="Digite seu E-mail" maxlength="50">
-      <input class="field" type="number" name="telefone" placeholder="Digite seu Telefone" maxlength="11">
-      <textarea class="field" type="text" name="mensagem" placeholder="Digite sua mensagem aqui" maxlength="120"></textarea>
+      <input class="field" type="text" name="nome" placeholder="Digite seu nome" maxlength="50" required>
+      <input class="field" type="email" name="email" placeholder="Digite seu E-mail" maxlength="50" required>
+      <input class="field" type="text" name="telefone" placeholder="Digite seu Telefone" maxlength="14" required>
+      <textarea class="field" type="text" name="mensagem" placeholder="Digite sua mensagem aqui" maxlength="150" required></textarea>
       <button onclick="abrirAlerta()">Enviar mensagem</button>
     </form>
   </section>
@@ -190,9 +190,5 @@
   <script>
     AOS.init(); 
   </script> 
-
-<!--Validação javascript-->
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/sweetalert.js"></script>
 </body> 
 </html>
