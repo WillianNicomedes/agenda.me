@@ -226,7 +226,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="telefone" class="labelInput">Telefone:</label>
                   <br>
-                  <input type="number" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" maxlength="15" required>
+                  <input type="text" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" maxlength="14" required>
                 </div>
                 
                 <br>
@@ -246,7 +246,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="rg" class="labelInput">RG:</label>
                   <br>
-                  <input type="number" name="rg" id="rg" class="labelInput" placeholder="Digite seu RG" maxlength="9" required>
+                  <input type="text" name="rg" id="rg" class="labelInput" placeholder="Digite seu RG" maxlength="9" required>
                 </div>    
 
                 <br>
@@ -254,7 +254,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="cpf" class="labelInput">CPF:</label>
                   <br>
-                  <input type="number" name="cpf" id="cpf" class="labelInput" placeholder="Digite seu CPF" maxlength="11" required>
+                  <input type="text" name="cpf" id="cpf" class="labelInput" placeholder="Digite seu CPF" maxlength="11" required>
                 </div>
 
                 <br>
@@ -298,7 +298,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                     <label for="cnpj" class="labelInput">CNPJ:</label>
                     <br>
-                    <input type="number" name="cnpj" id="cnpj" class="labelInput" placeholder="Digite seu cnpj" maxlength="100"required>
+                    <input type="number" name="cnpj" id="cnpj" class="labelInput" placeholder="Digite seu cnpj" maxlength="100" required>
                 </div>
 
                 <br>
@@ -306,7 +306,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="nm_rz_social" class="labelInput">Razão social:</label>
                   <br>
-                  <input type="text" name="nm_rz_social" id="nm_rz_social" class="labelInput" placeholder="Digite Razão social" required>
+                  <input type="text" name="nm_rz_social" id="nm_rz_social" class="labelInput" placeholder="Digite Razão social" maxlength="50" required>
                 </div>
 
                 <br>
@@ -322,7 +322,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <div class="inputBox">
                   <label for="telefone" class="labelInput">Telefone:</label>
                   <br>
-                  <input type="number" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" maxlength="15" required>
+                  <input type="text" name="telefone" id="telefone" class="labelInput" placeholder="Digite seu telefone" maxlength="14" required>
                 </div>
 
                 <br>
@@ -364,7 +364,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
             <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="principal/assets/img/gallery/hero.png" alt="hero-header" /></div>
             <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6">
               <h1 class="fw-light font-base fs-6 fs-xxl-7">agenda<strong>.me</strong><br>Consultas psicológicas de forma acessível</strong></h1>
-              <p class="fs-1 mb-5">Agende sua consulta presencial a qualquer hora, com total sigilo e segurança através do nosso site.</p><a class="btn btn-lg btn-primary rounded-pill" href="../agenda.me/sis-agendame/paciente.php?menuop=cad-contato" role="button" target="_blank">Agendar agora</a>
+              <p class="fs-1 mb-5">Agende sua consulta presencial a qualquer hora, com total sigilo e segurança através do nosso site.</p><a class="btn btn-lg btn-primary rounded-pill" onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-green w3-large" role="button" target="_blank">Criar uma conta</a>
             </div>
           </div>
         </div>
