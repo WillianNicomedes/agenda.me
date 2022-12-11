@@ -20,7 +20,7 @@
 </div>
 <br>
 
-<footer class="container-fluid fixed-bottom bg-dark text-light">
+<footer class="container-fluid fixed-bottom text-light">
        <div class="text-center">Copyright © 2022 agenda.me Todos os direitos reservados</div>
 </footer>
 </body>
