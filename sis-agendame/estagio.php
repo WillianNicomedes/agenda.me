@@ -59,7 +59,7 @@
             include("./paginas/eventos/eventos.php");
             break;             
         default:
-            include("./paginas/home/home.php");
+            include("./paginas/contatos/contatos.php");
             break;
    }
 ?>
