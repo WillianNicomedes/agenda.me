@@ -1,8 +1,24 @@
 body{
-    background-color: #58595a;
-    color: white;
+    background-color: #DFE8FF;
+    color: black;
 }
 
 .tabela{
-    margin-top:10px ;
+    margin-top:10px;
+}
+
+footer{
+    background-color: #135B7D;
+}
+
+.table-dark {
+    --bs-table-bg: #135B7D;
+    --bs-table-striped-bg: #135B7D;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #135B7D;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg:#135B7D;
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: white;
 }
