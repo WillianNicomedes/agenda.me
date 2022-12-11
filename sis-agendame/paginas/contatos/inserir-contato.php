@@ -34,8 +34,6 @@ if($rs){
   <hr>
   <div>
     <a class="btn btn-outline-danger mb-2" 
-    href="../calendario/index.php"><i class="bi bi-list-task"></i> Agendamento de consultas</a>
-    <a class="btn btn-outline-danger mb-2" 
     href="admin.php?menuop=contatos"><i class="bi bi-list-task"></i> Voltar para contatos</a>
   </div>
 </div>
