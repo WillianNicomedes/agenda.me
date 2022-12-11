@@ -26,8 +26,7 @@
 
                 <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
                     <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a href="admin.php?menuop=home" class="nav-link active">Home</a></li>
-                        <li class="nav-item"><a href="admin.php?menuop=contatos" class="nav-link">Contato</a></li>
+                        <li class="nav-item"><a href="admin.php?menuop=contatos" class="nav-link active">Contato</a></li>
                         <li class="nav-item"><a href="admin.php?menuop=tarefas" class="nav-link">Tarefas</a></li>
                         <li class="nav-item"><a href="../calendario/index.php" class="nav-link">Consultas</a></li>
                     </ul>
@@ -53,9 +52,6 @@
 <?php
     $menuop = (isset($_GET['menuop']))?$_GET['menuop']:'home';
     switch($menuop){
-        case 'home':
-            include("./paginas/home/home.php");
-            break;
         case 'contatos':
             include("./paginas/contatos/contatos.php");
             break;
@@ -93,7 +89,7 @@
             include("./paginas/tarefas/atualizar-tarefa.php");
             break;    
         default:
-            include("./paginas/home/home.php");
+            include("./paginas/contatos/contatos.php");
             break;
    }
 
