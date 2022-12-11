@@ -8,7 +8,7 @@ $txt_pesquisa = (isset($_POST['txt_pesquisa']))?$_POST['txt_pesquisa']:"";
     <h3><i class="bi bi-list-task"></i> Tarefas</h3>
 </header>
 <div>
-    <a class="btn btn-outline-info mb-2" 
+    <a class="btn btn-primary mb-2" 
     href="?menuop=cad-tarefa"><i class="bi bi-list-task"></i> Nova Tarefa</a>
 </div>
 <div>
