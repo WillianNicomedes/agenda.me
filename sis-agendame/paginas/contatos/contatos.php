@@ -9,7 +9,7 @@ $txt_pesquisa = (isset($_POST['txt_pesquisa']))?$_POST['txt_pesquisa']:"";
     <h3><i class="bi bi-person-square"></i> Pacientes</h3>
 </header>
 <div>
-    <a class="btn btn-outline-info mb-2" href="?menuop=cad-contato"><i class="bi bi-person-plus-fill"></i> Novo Contato</a>
+    <a class="btn btn-primary mb-2" href="?menuop=cad-contato"><i class="bi bi-person-plus-fill"></i> Novo Contato</a>
 </div>
 <div>
     <form action="admin.php?menuop=contatos" method="POST">
@@ -21,7 +21,7 @@ $txt_pesquisa = (isset($_POST['txt_pesquisa']))?$_POST['txt_pesquisa']:"";
     </form>
 </div>
 <div class="tabela">
-<table class="table table-dark table-striped table-bordered table-sm">
+<table class="table table-dark table-striped table-bordered table-sm" style="background-color: #135B7D;">
     <thead>
         <tr>
             <th>
