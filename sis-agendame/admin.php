@@ -18,8 +18,8 @@
 </head>
 <body>
     <header class="bg-dark">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #135B7D;">
+                <a href="#" class="navbar-brand"></a>
                 <a href="#" class="navbar-brand">
                     <img src="./img/logo.png" alt="sis-agenda.me" width="130" >
                 </a>
@@ -33,7 +33,6 @@
                     </ul>
                 </div>
             </nav>
-        </div>
     </header>
     <main>
    <div class="container">
