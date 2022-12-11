@@ -28,7 +28,7 @@
             <label class="form-label" for="telefoneContato">Telefone</label>
             <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                <input class="form-control" type="number" name="telefoneContato" maxlength="11" required>
+                <input class="form-control" type="text" name="telefoneContato" maxlength="14" required>
             </div>
         </div>
         <div class="mb-3">
