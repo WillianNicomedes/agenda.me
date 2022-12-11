@@ -28,7 +28,7 @@ if($rs){
   <hr>
   <div>
     <a class="btn btn-outline-danger mb-2" 
-    href="admin.php?menuop=tarefas"><i class="bi bi-list-task"></i> Voltar para a lista de tarefas</a>
+    href="admin.php?menuop=tarefas"><i class="bi bi-list-task"></i> Voltar para tarefas</a>
   </div>
 </div>
 
