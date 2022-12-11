@@ -18,7 +18,7 @@ $txt_pesquisa = (isset($_POST['txt_pesquisa']))?$_POST['txt_pesquisa']:"";
     </form>
 </div>
 <div class="tabela">
-<table class="table table-dark table-striped table-bordered table-sm">
+<table class="table table-dark table-striped table-bordered table-sm" style="background-color: #135B7D;">
     <thead>
         <tr>
             <th>
