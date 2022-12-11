@@ -11,7 +11,7 @@ or die("Erro ao excluir o registro. Erro:" . mysqli_error($conexao) );
   <hr>
   <div>
     <a class="btn btn-outline-danger mb-2" 
-    href="admin.php?menuop=contatos"><i class="bi bi-list-task"></i> Voltar para a lista de contatos</a>
+    href="admin.php?menuop=contatos"><i class="bi bi-list-task"></i> Voltar para contatos</a>
   </div>
 </div>
   <?php
