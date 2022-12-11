@@ -44,9 +44,6 @@
 <?php
     $menuop = (isset($_GET['menuop']))?$_GET['menuop']:'home';
     switch($menuop){
-        case 'home':
-            include("./paginas/home/home.php");
-            break;
         case 'contatos':
             include("./paginas/contatos/contatos.php");
             break;
@@ -84,7 +81,7 @@
             include("./paginas/tarefas/atualizar-tarefa.php");
             break;    
         default:
-            include("./paginas/home/home.php");
+            include("./paginas/contatos/contatos.php");
             break;
    }
 
