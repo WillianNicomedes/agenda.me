@@ -277,21 +277,6 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 										<div class="card-body">
 											<div class="d-flex align-items-center justify-content-between">
 												<h4 class="card-title mb-2">População Brasileira</h4>
-												<div class="dropdown">
-													<a href="#" class="text-success btn btn-link  px-1"><i class="mdi mdi-refresh"></i></a>
-													<a href="#" class="text-success btn btn-link px-1 dropdown-toggle dropdown-arrow-none" data-bs-toggle="dropdown" id="settingsDropdownsales">
-														<i class="mdi mdi-dots-horizontal"></i></a>
-														<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="settingsDropdownsales">
-															<a class="dropdown-item">
-																<i class="mdi mdi-grease-pencil text-primary"></i>
-																Editar
-															</a>
-															<a class="dropdown-item">
-																<i class="mdi mdi-delete text-primary"></i>
-																Excluir
-															</a>
-														</div>
-												</div>
 											</div>
 
 <!--Card de casos população-->
@@ -397,29 +382,11 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="d-flex align-items-center justify-content-between">
-														<h4 class="card-title mb-0">Total de dados:</h4>
-														<div class="dropdown">
-															<a href="#" class="text-success btn btn-link  px-1"><i class="mdi mdi-refresh"></i></a>
-															<a href="#" class="text-success btn btn-link px-1 dropdown-toggle dropdown-arrow-none" data-bs-toggle="dropdown" id="profileDropdownvisittoday"><i class="mdi mdi-dots-horizontal"></i></a>
-															<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdownvisittoday">
-																<a class="dropdown-item">
-																	<i class="mdi mdi-grease-pencil text-primary"></i>
-																	Editar
-																</a>
-																<a class="dropdown-item">
-																	<i class="mdi mdi-delete text-primary"></i>
-																	Excluir
-																</a>
-															</div>
-														</div>
+														<h4 class="card-title mb-0">Total de dados:</h4>	
 													</div>
 													<p class="mt-1">Calculado nos útimos 6 meses</p>
 													<div class="d-lg-flex align-items-center justify-content-between">
 														<h1 class="font-weight-bold text-dark">532</h1>
-														<div class="mb-3">
-															<button type="button" class="btn btn-outline-light text-dark font-weight-normal">Dia</button>
-															<button type="button" class="btn btn-outline-light text-dark font-weight-normal">Mês</button>
-														</div>
 													</div>
 													<canvas id="visitorsToday"></canvas>
 												</div>
