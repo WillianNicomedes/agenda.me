@@ -196,7 +196,7 @@
             <h3>Site</h3>
             <ul>
               <li><a href="../informacao/info.inicio.php">Termos de Uso</a></li>
-              <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf" target="_blank">Código de Ética</a></li>
+              <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf">Código de Ética</a></li>
               <li><a href="../informacao/info.inicio.php">Política de Privacidade</a></li>
             </ul>
           </div>
@@ -206,16 +206,16 @@
         <ul>
           <li><a href="../informacao/info.inicio.php">Contatos</a></li>
           <li><a href="../informacao/info.php">Desenvolvedores</a></li>
-          <li><a href="http://localhost/agenda.me/#missao" target="_blank">Missão, Visão e Valores</a></li>
+          <li><a href="http://localhost/agenda.me/#missao">Missão, Visão e Valores</a></li>
         </ul>
       </div>
 
       <div class="referencias">
         <h3>Explore</h3>
         <ul>
-          <li><a href="http://localhost/agenda.me/#" target="_blank">Cadastro</a></li>
-          <li><a href="../informacao/info.php" target="_blank">Depoimentos</a></li>
-          <li><a href="http://localhost/agenda.me/#servico" target="_blank">Buscar Consultórios</a></li>
+          <li><a href="http://localhost/agenda.me/#">Cadastro</a></li>
+          <li><a href="../informacao/info.php">Depoimentos</a></li>
+          <li><a href="http://localhost/agenda.me/#servico">Buscar Consultórios</a></li>
         </ul>
       </div>
 
