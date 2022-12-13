@@ -378,7 +378,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
             <div class="col-md-7 col-xxl-6 text-center text-md-start">
               <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Conheça nossa plataforma<br class="d-none d-sm-block"/>agenda.me</h2>
               <p class="text-light">Nossa plataforma consta com diversas funcionalidades de agendamento<br class="d-none d-sm-block"/>Chat, E-mail, Whatsapp e Ligação. Em caso de emergência<br class="d-none d-sm-block"/>CVV, apoio emocional com funcionamento 24 horas todos os dias, para realizar um acompanhento com um dos voluntários simpáticos e dipostos a ajudar.</p>
-              <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="../agenda.me/informacao/info.inicio.php" target="_blank" role="button">SAIBA MAIS</a></div>
+              <div class="py-3"><a class="btn btn-lg btn-light rounded-pill" href="../agenda.me/informacao/info.inicio.php" role="button">SAIBA MAIS</a></div>
             </div>
           </div>
         </div>
@@ -501,17 +501,17 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
         <div class="referencias">
             <h3>Site</h3>
             <ul>
-              <li><a href="../agenda.me/informacao/info.inicio.php" target="_blank">Termos de Uso</a></li>
-              <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf" target="_blank">Código de Ética</a></li>
-              <li><a href="../agenda.me/informacao/info.inicio.php" target="_blank">Política de Privacidade</a></li>
+              <li><a href="../agenda.me/informacao/info.inicio.php">Termos de Uso</a></li>
+              <li><a href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo_etica.pdf">Código de Ética</a></li>
+              <li><a href="../agenda.me/informacao/info.inicio.php">Política de Privacidade</a></li>
             </ul>
           </div>
 
       <div class="referencias">
         <h3>Equipe</h3>
         <ul>
-          <li><a href="../agenda.me/informacao/info.inicio.php" target="_blank">Contatos</a></li>
-          <li><a href="../agenda.me/informacao/info.php" target="_blank">Desenvolvedores</a></li>
+          <li><a href="../agenda.me/informacao/info.inicio.php">Contatos</a></li>
+          <li><a href="../agenda.me/informacao/info.php">Desenvolvedores</a></li>
           <li><a href="../agenda.me/#missao">Missão, Visão e Valores</a></li>
         </ul>
       </div>
