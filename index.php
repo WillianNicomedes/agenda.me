@@ -520,7 +520,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
         <h3>Explore</h3>
         <ul>
           <li><a href="../agenda.me/#">Cadastro</a></li>
-          <li><a href="../agenda.me/informacao/info.php" target="_blank">Depoimentos</a></li>
+          <li><a href="../agenda.me/informacao/info.php">Depoimentos</a></li>
           <li><a href="../agenda.me/#servico">Buscar Consultórios</a></li>
         </ul>
       </div>
