@@ -543,4 +543,4 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 			});
 			bar.animate(.<?php echo Estatiticas::sessaoEstagiarios();?>); 
 		}	
-	</script>
+</script>
