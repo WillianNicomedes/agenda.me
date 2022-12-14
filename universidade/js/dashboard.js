@@ -15,27 +15,6 @@
 				],
 				borderWidth: 2,
 				fill: false,
-			},
-			{
-				label: 'Ansiedade',
-				borderDash: [3, 4],
-				data: [3, 5, 8, 8, 13, 12, 17, 19, 14, 19, 18, 25.6],
-				borderColor: [
-						'#464dee',
-				],
-				borderWidth: 2,
-				fill: false,
-				pointBorderWidth: 4,
-			},
-			{
-				label: 'População',
-				data: [1, 3, 3.7, 6, 5.2, 6.3, 8, 8, 9.5, 10.5, 11.5, 12],
-				borderColor: [
-						'#ee5b5b',
-				],
-				borderWidth: 2,
-				fill: false,
-				pointBorderWidth: 4,
 			}],
 		};
 		var revenueChartOptions = {
@@ -109,33 +88,11 @@
 		var serveLoadingData = {
 			labels: ["Jan", "Fev", "Mar", "Abri", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
 			datasets: [{
-				label: 'Depressão',
-				data: [2, 4, 5, 5, 10, 10, 15, 12, 17, 20, 27.6, 27.6],
-				backgroundColor: [
-						'#0ddbb9',
-				],
-				borderColor: [
-						'#0ddbb9'
-				],
-				borderWidth: 2,
-				fill: false,
-			},
-			{
 				label: 'Ansiedade',
 				borderDash: [3, 4],
 				data: [3, 5, 8, 8, 13, 12, 17, 19, 14, 19, 18, 25.6],
 				borderColor: [
 						'#464dee',
-				],
-				borderWidth: 2,
-				fill: false,
-				pointBorderWidth: 4,
-			},
-			{
-				label: 'População',
-				data: [1, 3, 3.7, 6, 5.2, 6.3, 8, 8, 9.5, 10.5, 11.5, 12],
-				borderColor: [
-						'#ee5b5b',
 				],
 				borderWidth: 2,
 				fill: false,
