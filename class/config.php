@@ -1,10 +1,10 @@
 <?php
 SESSION_START();
 //CONFIGURAÇÕES DO BANCO DE DADOS
-define('SERVIDOR','localhost');
-define('USUARIO','root');
-define('SENHA','');
-define('BANCO','AgendaMe');
+define('SERVIDO','localhost');
+define('USUARI','root');
+define('SENH','root');
+define('BANC','agendame');
 
 function limpaString($dados){
     $dados = trim($dados);
