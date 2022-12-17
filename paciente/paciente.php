@@ -1,8 +1,10 @@
 <?php
-require_once('../class/config.php');
+require_once('../calendario/evento/action/conexao.php');
+
 require_once('../autoload.php');
 
-$login = new Login();
+$conexao = new Database;
+$login = new Login($conexao->conectar());
 $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 
 //echo "<h1>Bem vindo $login->nome!<br>Email:$login->email";/*/
@@ -95,7 +97,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
             <div class="scroll-sidebar">
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="nav-link active" href="http://localhost/agenda.me/" aria-expanded="false"><i
+                        <li> <a class="nav-link active" href="http://localhost/agenda.me-main/" aria-expanded="false"><i
                             class="mdi mdi-account-check"></i><span class="hide-menu">Logout</span></a></li>
                     </ul>
                 </nav>
