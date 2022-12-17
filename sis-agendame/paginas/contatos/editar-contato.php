@@ -1,4 +1,5 @@
 <?php
+
 $idContato = $_GET['idContato'];
 $sql = "SELECT * FROM tbcontatos WHERE idContato = '{$idContato}'";
 $rs = mysqli_query($conexao,$sql) or die("Erro ao recuperar os dados do registro." . mysqli_error($conexao));
@@ -53,6 +54,24 @@ $dados = mysqli_fetch_assoc($rs);
                     <i class="bi bi-mailbox2"></i>
                 </span>
                 <input class="form-control" type="text" name="enderecoContato" maxlength="100" required value="<?=$dados['enderecoContato']?>">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="rgContato">RG</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-mailbox2"></i>
+                </span>
+                <input class="form-control" type="text" name="rgContato" maxlength="100" required value="<?=$dados['cd_rg_paciente']?>">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="cpfContato">CPF</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-mailbox2"></i>
+                </span>
+                <input class="form-control" type="text" name="cpfContato" maxlength="100" required value="<?=$dados['cd_cpf_paciente']?>">
             </div>
         </div>
         <div class="row mb-3">
