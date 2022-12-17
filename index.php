@@ -1,13 +1,14 @@
 <?php 
 require_once('./class/config.php');
+require_once('./calendario/evento/action/conexao.php');
 require_once('autoload.php');
 
 if(isset($_POST['senha'])&& isset($_POST['email']) && !empty($_POST['email']) && !empty($_POST['senha'])&& !empty($_POST['opcao'])&&isset($_POST['opcao'])){
     $email = limpaString($_POST['email']);
     $senha = limpaString($_POST['senha']);
     $opcao = $_POST['opcao'];
-
-    $login = new Login();
+    $conexao = new Database;
+    $login = new Login($conexao->conectar());
     $login-> pegarEmailEsenha($email,$senha,$opcao);
 }
 
@@ -22,17 +23,18 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
       $dt_nasc = $_POST['data_nascimento'];
       $rg = limpaString($_POST['rg']);
       $cpf = limpaString($_POST['cpf']);
-     
-    
-
+      $endereco = limpaString($_POST['endereco']);
+   
     //VERIFICAR SE VALORES VINDOS DO POST NÃO ESTÃO VAZIOS
     if(empty($nome) or empty($email) or empty($telefone) or empty($genero)
-    or empty($dt_nasc) or empty($cpf) or empty($rg) or empty($senha)){
+    or empty($dt_nasc) or empty($cpf) or empty($rg) or empty($senha) or empty($endereco)){
         $erro_geral = "Todos os campos são obrigatórios!";
         
     }else{
         //INSTANCIAR A CLASSE USUARIO
-        $usuario = new Usuario($nome,$email,$senha,$telefone,$genero,$cpf,$rg,$dt_nasc);
+        $conexao = new Database;
+        
+        $usuario = new Usuario($nome,$email,$senha,$telefone,$genero,$cpf,$rg,$dt_nasc,$endereco,$conexao->conectar());
         //VALIDAR O CADASTRO
         $usuario->validar_cadastro();
 
@@ -44,7 +46,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                // header('location: cadastrar.php');//
             }else{
                 //DEU ERRADO - ERRO GERAL
-                $erro_geral = $usuario->erro["erro_geral"];
+         
             }
         }
     }
@@ -135,7 +137,7 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
           <input type="radio" id="estagiario" name="opcao" value="estagiario" required>
           <label for="estagiario">Estagiário</label><br>
 
-          <input type="radio" id="paciente" name="opcao" value="paciente" required>
+          <input type="radio" id="paciente" name="opcao" value="tbcontatos" required>
           <label for="paciente">Paciente</label>
 
           <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Entrar</button>
@@ -216,6 +218,14 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <br>
 
                 <div class="inputBox">
+                  <label for="email" class="labelInput">Endereço:</label>
+                  <br>
+                  <input type="text" name="endereco" id="endereco" class="labelInput" placeholder="Digite seu endereço" maxlength="50" required>
+                </div>
+
+                <br>
+
+                <div class="inputBox">
                   <label for="email" class="labelInput">E-mail:</label>
                   <br>
                   <input type="email" name="email" id="email" class="labelInput" placeholder="Digite seu e-mail" maxlength="50" required>
@@ -232,13 +242,13 @@ if (isset($_POST['senha'])&& isset($_POST['email'])&&isset($_POST['nome'])&&isse
                 <br>
 
                 <p>Sexo:</p>
-                    <input type="radio" id="feminino "name="genero" value="feminino" required>
+                    <input type="radio" id="feminino "name="genero" value="F" required>
                     <label for="Feminino">Feminino</label><br>
-                    <input type="radio" id="masculino "name="genero" value="masculino" required>
+                    <input type="radio" id="masculino "name="genero" value="M" required>
                     <label for="masculino">Masculino</label><br>
-                    <input type="radio" id="outro "name="genero" value="outro" required>
+                    <input type="radio" id="outro "name="genero" value="O" required>
                     <label for="outro">Outro</label>
-                    <br><br>
+                    <br>
 
                     <label for="data_nascimento"><b>Data de nascimento:</b> </label>
                     <input type="date" name="data_nascimento" id="data_nascimento" required>
