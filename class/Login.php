@@ -2,6 +2,9 @@
 require_once('DB.php');
 
 class Login{
+    function __construct(
+        public $conexao=[]
+    ){}
     protected string $tabela;
     public string $email;
     public string $nome;
@@ -26,7 +29,7 @@ class Login{
     public function optionLogin()
     {
         switch ($this->tabela) {
-            case "paciente":
+            case "tbcontatos":
                 Login::LoginPaciente();
                 break;
             case "universidade":
@@ -67,21 +70,19 @@ class Login{
     public function LoginPaciente()
     {
         //verificar se tem esse usuario cadastrado//
-        $sql = "SELECT ds_email_paciente, cd_senha FROM $this->tabela AS pa
-                INNER JOIN contato AS con ON(pa.id_paciente = con.id_paciente)
-                WHERE ds_email_paciente =? AND cd_senha=? LIMIT 1";
-        $sql = DB::prepare($sql);
+        $sql = "SELECT emailContato, senhaContato FROM $this->tabela AS con
+                WHERE emailContato =? AND senhaContato=? LIMIT 1";
+        $sql = $this->conexao->prepare($sql);
         $sql->execute(array($this->email, $this->senha));
         $usuario = $sql->fetch(PDO::FETCH_ASSOC);
         if($usuario)
         {
             Login::token();
 
-            $sql = "UPDATE $this->tabela as pa
-                    INNER JOIN contato as con on(pa.id_paciente = con.id_paciente)
+            $sql = "UPDATE $this->tabela 
                     SET cd_token = ?
-                    WHERE  ds_email_paciente = ? and  cd_senha = ?";
-            $sql = DB::prepare($sql);
+                    WHERE  emailContato = ? and  senhaContato = ?";
+            $sql = $this->conexao->prepare($sql);
             if($sql->execute(array($this->token,$this->email,$this->senha)))
             {
                 $_SESSION['cd_token'] = $this->token;
@@ -122,35 +123,37 @@ class Login{
     public function VerificarToken($token,$tabela)
     {
        $this->tabela=$tabela;
-       $sql = "SELECT * FROM $this->tabela WHERE cd_token=? LIMIT 1";
-       $sql = DB::prepare($sql);
-       $sql->execute(array($token));
-       $usuario = $sql->fetch(PDO::FETCH_ASSOC);
-       if($usuario)
-       {
+      
+     
             switch ($this->tabela){
-                case "paciente":
-                    $sql = "SELECT * FROM InfoPaciente WHERE cd_token=?";
-                    $sql = DB::prepare($sql);
+                case "tbcontato":
+                    $sql = "SELECT * FROM tbcontato WHERE cd_token=?";
+                    $sql = $this->conexao->prepare($sql);
                     $sql->execute(array($token));
                     $usuario=$sql->fetch(PDO::FETCH_ASSOC);
-                        $this->email = $usuario["ds_email_paciente"];
-                        $this->nome = $usuario["nm_paciente"];
+                        $this->email = $usuario["emailContato"];
+                        $this->nome = $usuario["nomeContato"];
                     break;
                 case "universidade":
+                    $sql = "SELECT * FROM $this->tabela WHERE cd_token=? LIMIT 1";
+                    $sql = DB::prepare($sql);
+                    $sql->execute(array($token));
+                    $usuario = $sql->fetch(PDO::FETCH_ASSOC);
                         $this->email = $usuario["cd_senha_universiade"];
                         $this->nome = $usuario["ds_email_universiade"];
                         $_SESSION['id_universidade'] = $usuario["id_universidade"];
                         
                     break;
                 case "estagiario":
+                    $sql = "SELECT * FROM $this->tabela WHERE cd_token=? LIMIT 1";
+                    $sql = DB::prepare($sql);
+                    $sql->execute(array($token));
+                    $usuario = $sql->fetch(PDO::FETCH_ASSOC);
                     $this->email = $usuario["nm_email_aluno"];
                     $this->nome = $usuario["nm_aluno"];
                     break;
             }
-       }else{
-        header('location: index.php');
-       }
+     
     }
 }
 
