@@ -32,6 +32,7 @@
                 <label for="horaLembreteTarefa" class="form-label">Hora de Lembrete</label>
                 <input class="form-control" type="time" name="horaLembreteTarefa" id="horaLembreteTarefa">
             </div>
+            
         </div>
         <div class="row">
             <div class="mb-3 col-3">
