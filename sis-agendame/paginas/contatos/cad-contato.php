@@ -38,6 +38,18 @@
                 <input class="form-control" type="text" name="enderecoContato" maxlength="100" required>
             </div>
         </div>
+        <div class="mb-3">
+            <label class="form-label" for="rgContato">RG</label>
+            <div class="input-group">
+                <input class="form-control" type="text" name="rgContato" maxlength="7" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="cpfContato">CPF</label>
+            <div class="input-group">
+                <input class="form-control" type="text" name="cpfContato" maxlength="11" required>
+            </div>
+        </div>
         <div class="row">
         <div class="mb-3 col-3">
             <label class="form-label" for="sexoContato">Sexo</label>
