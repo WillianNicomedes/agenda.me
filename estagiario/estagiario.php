@@ -101,7 +101,7 @@ $login->VerificarToken($_SESSION['cd_token'],$_SESSION['opcao']);
 					  <img src="../estagiario/images/avatar3.png" alt="perfil"/>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-						<a href="http://localhost/agenda.me/" class="dropdown-item">
+						<a href="http://localhost/agenda.me-main/" class="dropdown-item">
 						  <i class="mdi mdi-logout text-primary"></i>
 						  Logout
 						</a>
