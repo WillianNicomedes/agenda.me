@@ -1,8 +1,9 @@
 <?php
-require_once('Crud.php');
-
-class Usuario extends Crud{
-    protected string $tabela = 'paciente';
+include('./sis-agendame/db/conexao.php');
+   
+class Usuario{
+    
+    protected string $tabela = 'tbcontatos';
     
 
     function __construct(
@@ -14,8 +15,12 @@ class Usuario extends Crud{
         public string $cpf,
         public string $rg,
         public string $dt_nasc,
+        public string $endereco,
+        public $conexao=[],
         public string $token="",
+        public float $flag=0,
         public array $erro=[]
+      
     ){}
 
     public function validar_cadastro(){
@@ -31,47 +36,27 @@ class Usuario extends Crud{
         }
 
         //VERIFICAR SE SENHA TEM MAIS DE 6 DÍGITOS
-        if(strlen($this->senha) < 6){
+        if(strlen($this->senha) > 11){
             $this->erro["erro_senha"] = "Senha deve ter 6 caracteres ou mais!";
+            echo "<script language=\"javascript\">
+            alert(\"Foi salvo com sucesso!\");
+            </script>";
         }
 
     }
 
     public function insertPaciente(){
         //VERIFICAR SE ESTE EMAIL JÁ ESTÁ CADASTRADO NO BANCO
-        $sql = "SELECT * FROM contato WHERE ds_email_paciente=? LIMIT 1";
-        $sql = DB::prepare($sql);
+        $sql = "SELECT * FROM tbcontatos WHERE emailContato=? LIMIT 1";
+        $sql = $this->conexao->prepare($sql);
         $sql->execute(array($this->email));
         $usuario = $sql->fetch();
         //SE NÃO EXISTIR O USUARIO - ADICIONAR NO BANCO
         if (!$usuario)
         {
-            $sql = "INSERT INTO $this->tabela VALUES (null,?,?,?,?,?,?,?)";
-            $sql = DB::prepare($sql);
-           /*/ok/*/ $paciente = $sql->execute(array($this->nome,$this->cpf,$this->dt_nasc,$this->rg,$this->genero,$this->senha,$this->token));
-        
-            if($paciente)
-            {
-                //PROCURANDO O ID DO PACIENTE
-                $sql = "SELECT id_paciente FROM $this->tabela as pa
-                        WHERE nm_paciente = ? AND cd_cpf_paciente=? AND cd_rg_paciente=? AND cd_senha=?";
-                $sql = DB::prepare($sql);
-                $sql->execute(array($this->nome,$this->cpf,$this->rg,$this->senha));
-                $idPaciente = $sql->fetch();
-                
-               // return print_r($idPaciente);//
-                if($idPaciente)
-                {
-                    $sql = "INSERT INTO contato VALUES (null,?,?,?)";
-                    $sql = DB::prepare($sql);
-                    return $sql->execute(array($this->telefone,$this->email, $idPaciente->{'id_paciente'}));
-                }else{
-                    $this->erro["erro_geral"] = "";
-                }
-            }else{
-                $this->erro["erro_geral"] = "Usuário já cadastrado!";
-
-            }
+            $sql = "INSERT INTO $this->tabela VALUES (null,?,?,?,?,?,?,?,null,?,?,?,?)";
+            $sql = $this->conexao->prepare($sql);
+           /*/ok/*/ $paciente = $sql->execute(array($this->nome,$this->email,$this->telefone,$this->endereco,$this->genero,$this->dt_nasc,'0',$this->rg,$this->cpf,$this->senha,$this->token));
         }else{
             $this->erro["erro_geral"] = "Usuário já cadastrado!";
         }
