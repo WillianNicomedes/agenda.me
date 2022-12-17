@@ -2,8 +2,8 @@
     class Database{
         private $hostname = 'localhost';
         private $username = 'root';
-        private $password = '';
-        private $database = 'dbagendame';
+        private $password = 'root';
+        private $database = 'willian';
         private $conexao;
 
         public function conectar(){
@@ -20,5 +20,7 @@
 
             return $this->conexao;
         }
+
+        
     }
 ?>
