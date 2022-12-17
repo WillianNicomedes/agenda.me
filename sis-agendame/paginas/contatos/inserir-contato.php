@@ -1,32 +1,22 @@
 <?php
+  
     $nomeContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["nomeContato"])); 
     $emailContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["emailContato"])); 
     $telefoneContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["telefoneContato"])); 
     $enderecoContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["enderecoContato"])); 
     $sexoContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["sexoContato"])); 
     $dataNascContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["dataNascContato"])); 
+    $rgContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["rgContato"])); 
+    $cpfContato = strip_tags( mysqli_real_escape_string($conexao,$_POST["cpfContato"]));
+    $token = ""; 
+    $sql = "INSERT INTO tbcontatos VALUES (null,?,?,?,?,?,?,?,null,?,?,?,?)";
+    $sql = $conexao->prepare($sql);
+    $sql->execute(array($nomeContato,$emailContato,$telefoneContato,$enderecoContato,$sexoContato,$dataNascContato,'0',$rgContato,$cpfContato,$token,$cpfContato));
 
-    $sql = "INSERT INTO tbcontatos (
-        nomeContato,
-        emailContato,
-        telefoneContato,
-        enderecoContato,
-        sexoContato,
-        dataNascContato
-    )
-    VALUES (
-        '{$nomeContato}',
-        '{$emailContato}',
-        '{$telefoneContato}',
-        '{$enderecoContato}',
-        '{$sexoContato}',
-        '{$dataNascContato}'
-        )    
-    ";
 
-    $rs = mysqli_query($conexao,$sql);
+   
 
-if($rs){
+if($sql){
   ?>
     <div class="alert alert-success" role="alert">
   <h4 class="alert-heading">Inserir Contato:</h4>
